@@ -132,34 +132,36 @@ def middle(input_list):
 print middle([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])  
 
 
-# def inner_four(input_list):
-#     """
-#     Return the third, fourth, fifth, and sixth elements of the input list.
+def inner_four(input_list):
+    """
+    Return the third, fourth, fifth, and sixth elements of the input list.
 
-#     For example:
+    For example:
 
-#     >>> inner_four([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
-#     [6, 9, 12, 15]
+    >>> inner_four([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
+    [6, 9, 12, 15]
 
-#     """
+    """
 
-#     return []
+    return input_list[2:6]
+print inner_four([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
 
 
-# def inner_four_end(input_list):
-#     """
-#     Return the sixth, fifth, fourth, and third elements from the end of the
-#     list, in that order.
+def inner_four_end(input_list):
+    """
+    Return the sixth, fifth, fourth, and third elements from the end of the
+    list, in that order.
 
-#     For example:
+    For example:
 
-#     >>> inner_four_end([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
-#     [12, 15, 18, 21]
+    >>> inner_four_end([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
+    [12, 15, 18, 21]
 
-#     """
+    """
 
-#     return []
+    return input_list[-6:-2]
 
+print inner_four_end([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
 
 # def replace_head(input_list):
 #     """
