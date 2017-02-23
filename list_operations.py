@@ -65,38 +65,40 @@ def last(input_list):
 
 print last(['Jan', 'Feb', 'Mar'])
 
-# def init(input_list):
-#     """
-#     Return all elements of the input list except the last.
+def init(input_list):
+    """
+    Return all elements of the input list except the last.
 
-#     For example:
+    For example:
 
-#     >>> init(['Jan', 'Feb', 'Mar'])
-#     ['Jan', 'Feb']
+    >>> init(['Jan', 'Feb', 'Mar'])
+    ['Jan', 'Feb']
 
-#     """
+    """
 
-#     return []
+    return input_list[:-1]
 
+print init(['Jan', 'Feb', 'Mar'])
 
 # ##############################################################################
 # # Do yourself a favor and get a short code review here.
 # # You can also get reviewed by a neighbor who has been reviewed.
 
 
-# def first_three(input_list):
-#     """
-#     Return the first three elements of the input list.
+def first_three(input_list):
+    """
+    Return the first three elements of the input list.
 
-#     For example:
+    For example:
 
-#     >>> first_three(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
-#     ['Jan', 'Feb', 'Mar']
+    >>> first_three(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
+    ['Jan', 'Feb', 'Mar']
 
-#     """
+    """
 
-#     return []
+    return input_list[0:3]
 
+print first_three(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
 
 # def last_five(input_list):
 #     """
@@ -246,8 +248,8 @@ print last(['Jan', 'Feb', 'Mar'])
 # Please ask for a code review from an instructor/TA before proceeding.
 
 
-# if __name__ == "__main__":
-#     import doctest
-#     result = doctest.testmod()
-#     if result.failed == 0:
-#         print "ALL TESTS PASSED"
+if __name__ == "__main__":
+    import doctest
+    result = doctest.testmod()
+    if result.failed == 0:
+        print "ALL TESTS PASSED"
