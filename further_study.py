@@ -57,26 +57,30 @@ def custom_append(input_list, value):
 
     """
 
-    input_list + value
+    input_list[-1:] = [input_list[-1], value]
 
 
-# def custom_extend(input_list, second_list):
-#     """Appends every item in second_list to input_list.
+def custom_extend(input_list, second_list):
+    """Appends every item in second_list to input_list.
 
-#     Like input_list.extend(second_list), custom_extend(input_list, second_list)
-#     should append every item in the second list to the end of the first list
-#     and return nothing.
+    Like input_list.extend(second_list), custom_extend(input_list, second_list)
+    should append every item in the second list to the end of the first list
+    and return nothing.
 
-#     For example:
+    For example:
 
-#         >>> months = ['Jan', 'Feb', 'Mar']
-#         >>> custom_extend(months, ['Apr', 'May'])
-#         >>> months == ['Jan', 'Feb', 'Mar', 'Apr', 'May']
-#         True
+        >>> months = ['Jan', 'Feb', 'Mar']
+        >>> custom_extend(months, ['Apr', 'May'])
+        >>> months == ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+        True
 
-#     """
+    """
 
-#     pass
+    #input_list[-1:] = [input_list[-1]] + second_list[:]
+
+    for item in second_list:
+        input_list[-1:] = [input_list[-1], item]
+
 
 
 # def custom_insert(input_list, index, value):
