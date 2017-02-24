@@ -31,7 +31,7 @@ def head(input_list):
     """
     return input_list[0]
 
-print head(['Jan', 'Feb', 'Mar'])
+
 
 
 def tail(input_list):
@@ -47,7 +47,7 @@ def tail(input_list):
 
     return input_list[1:]
 
-print tail(['Jan', 'Feb', 'Mar'])    
+   
 
 
 def last(input_list):
@@ -63,7 +63,7 @@ def last(input_list):
 
     return input_list[-1]
 
-print last(['Jan', 'Feb', 'Mar'])
+
 
 def init(input_list):
     """
@@ -78,7 +78,7 @@ def init(input_list):
 
     return input_list[:-1]
 
-print init(['Jan', 'Feb', 'Mar'])
+
 
 # ##############################################################################
 # # Do yourself a favor and get a short code review here.
@@ -98,7 +98,7 @@ def first_three(input_list):
 
     return input_list[0:3]
 
-print first_three(['Jan', 'Feb', 'Mar', 'Apr', 'May'])
+
 
 def last_five(input_list):
     """
@@ -113,7 +113,7 @@ def last_five(input_list):
 
     return input_list[-5:]
 
-print last_five([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
+
 
 
 def middle(input_list):
@@ -129,7 +129,6 @@ def middle(input_list):
 
     return input_list[2:-2]
 
-print middle([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])  
 
 
 def inner_four(input_list):
@@ -144,7 +143,7 @@ def inner_four(input_list):
     """
 
     return input_list[2:6]
-print inner_four([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
+
 
 
 def inner_four_end(input_list):
@@ -161,91 +160,94 @@ def inner_four_end(input_list):
 
     return input_list[-6:-2]
 
-print inner_four_end([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
-
-# def replace_head(input_list):
-#     """
-#     Replace the head of the input list with the value 42 and
-#     return nothing.
-
-#     For example:
-
-#     >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-#     >>> replace_head(multiples)
-#     >>> multiples == [42, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-#     True
-
-#     """
-
-#     pass
 
 
-# def replace_third_and_last(input_list):
-#     """
-#     Replace the third and last elements of the input list with the value 37
-#     and return nothing.
+def replace_head(input_list):
+    """
+    Replace the head of the input list with the value 42 and
+    return nothing.
 
-#     For example:
+    For example:
 
-#     >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-#     >>> replace_third_and_last(multiples)
-#     >>> multiples == [0, 3, 37, 9, 12, 15, 18, 21, 24, 37]
-#     True
+    >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    >>> replace_head(multiples)
+    >>> multiples == [42, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    True
 
-#     """
+    """
 
-#     pass
-
-
-# def replace_middle(input_list):
-#     """
-#     Replace all elements of the input list with the the values 42 and 37, in
-#     that order, except for the first two and last two elements. Return nothing.
-
-#     For example:
-
-#     >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
-#     >>> replace_middle(multiples)
-#     >>> multiples == [0, 3, 42, 37, 24, 27]
-#     True
-
-#     """
-
-#     pass
+    input_list[0] = 42
 
 
-# def delete_third_and_seventh(input_list):
-#     """
-#     Remove the third and seventh elements of the input list and return
-#     nothing.
+def replace_third_and_last(input_list):
+    """
+    Replace the third and last elements of the input list with the value 37
+    and return nothing.
 
-#     For example:
+    For example:
 
-#     >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-#     >>> delete_third_and_seventh(notes)
-#     >>> notes == ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
-#     True
+    >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    >>> replace_third_and_last(multiples)
+    >>> multiples == [0, 3, 37, 9, 12, 15, 18, 21, 24, 37]
+    True
 
-#     """
+    """
 
-#     pass
+    input_list[2] = 37 
+    input_list[-1] = 37
 
 
-# def delete_middle(input_list):
-#     """
-#     Remove all elements from the input list except for the first two and the
-#     last two. Return nothing.
 
-#     For example:
+def replace_middle(input_list):
+    """
+    Replace all elements of the input list with the the values 42 and 37, in
+    that order, except for the first two and last two elements. Return nothing.
 
-#     >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
-#     >>> delete_middle(notes)
-#     >>> notes == ['Do', 'Re', 'Ti', 'Do']
-#     True
+    For example:
 
-#     """
+    >>> multiples = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+    >>> replace_middle(multiples)
+    >>> multiples == [0, 3, 42, 37, 24, 27]
+    True
 
-#     pass
+    """
+
+    input_list[2:-2] = 42, 37
+
+
+def delete_third_and_seventh(input_list):
+    """
+    Remove the third and seventh elements of the input list and return
+    nothing.
+
+    For example:
+
+    >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+    >>> delete_third_and_seventh(notes)
+    >>> notes == ['Do', 'Re', 'Fa', 'So', 'La', 'Do']
+    True
+
+    """
+
+    del input_list[2]
+    del input_list[5]
+
+
+def delete_middle(input_list):
+    """
+    Remove all elements from the input list except for the first two and the
+    last two. Return nothing.
+
+    For example:
+
+    >>> notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+    >>> delete_middle(notes)
+    >>> notes == ['Do', 'Re', 'Ti', 'Do']
+    True
+
+    """
+
+    del input_list[2:-2]
 
 
 ##############################################################################
